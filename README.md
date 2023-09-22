@@ -1,18 +1,27 @@
 # Project
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
-
-As the maintainer of this project, please make a few updates:
-
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
-
 ## Code Structure
 
-TBD
+| Directory           | Description                                         |
+|---------------------|-----------------------------------------------------|
+| Root                | Essential project files and documentation.         |
+|                     | - `.gitignore`                                      |
+|                     | - `CODE_OF_CONDUCT.md`                             |
+|                     | - `LICENSE`                                         |
+|                     | - `package.json`                                    |
+|                     | - `README.md`                                       |
+|                     | - `SECURITY.md`                                     |
+|                     | - `SUPPORT.md`                                      |
+|                     |
+| .vscode             | VSCode-specific configuration files.                |
+|                     | - `launch.json`                                     |
+|                     |
+| config              | Project configuration files.                        |
+|                     | - `tmdl-configuration.json`                         |
+|                     |
+| syntaxes            | Syntax definition files.                            |
+|                     | - `tmdl.tmLanguage.json`                            |
+
 
 ## Contributing
 
