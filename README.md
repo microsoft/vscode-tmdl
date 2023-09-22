@@ -1,4 +1,10 @@
-# Project
+# TMDL Extension for Visual Studio Code
+
+A Visual Studio Code extension that adds language support for the Tabular Model Definition Language (TMDL).
+
+Current features include:
+- Syntax Highlighting
+- ...More coming soon!
 
 ## Code Structure
 
