@@ -8,7 +8,7 @@
 		"type": "git",
 		"url": "https://github.com/microsoft/vscode-tmdl"
 	},
-	"publisher": "vscode-tmdl",
+	"publisher": "analysis-services",
 	"categories": [],
 	"keywords": [
 		"multi-root ready"
