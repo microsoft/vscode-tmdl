@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "es2020",
+		"lib": ["es2020"],
+		"outDir": "out",
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"composite": true
+	},
+	"include": ["TmdlSchema.json"],
+	"exclude": ["node_modules", ".vscode-test"]
+}

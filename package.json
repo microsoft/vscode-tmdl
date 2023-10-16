@@ -14,8 +14,9 @@
 		"multi-root ready"
 	],
 	"engines": {
-		"vscode": "^1.74.0"
+		"vscode": "^1.75.0"
 	},
+	"main": "./client/out/extension",
 	"contributes": {
 		"languages": [
 			{
@@ -35,6 +36,50 @@
 			  "scopeName": "source.tmdl",
 			  "path": "./syntaxes/tmdl.tmLanguage.json"
 			}
-		]
+		],
+		"configuration": {
+			"type": "object",
+			"title": "TMDL language extension configuration",
+			"properties": {
+				"tmdlLanguageExtension.maxNumberOfProblems": {
+					"scope": "resource",
+					"type": "number",
+					"default": 100,
+					"description": "Controls the maximum number of problems reported by the TMDL language server."
+				},
+				"tmdlLanguageExtension.trace.server": {
+					"scope": "window",
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VS Code and the TMDL language server."
+				}
+			}
+		}
+	},
+	"configurationDefaults": {
+		"[tmdl]": {
+		  "editor.semanticHighlighting.enabled": true
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
+		"postinstall": "cd client && npm install && cd ../server && npm install && cd .."
+	},
+	"devDependencies": {
+		"@types/mocha": "^9.1.0",
+		"@types/node": "^16.18.34",
+		"@typescript-eslint/eslint-plugin": "^6.7.0",
+		"@typescript-eslint/parser": "^6.7.0",
+		"eslint": "^8.35.0",
+		"mocha": "^9.2.1",
+		"typescript": "^5.2.2"
 	}
 }

@@ -15,6 +15,16 @@
 			"preLaunchTask": "",
 			"request": "launch",
 			"type": "extensionHost"
+		},
+		{
+			"type": "extensionHost",
+			"request": "launch",
+			"name": "Launch Client",
+			"runtimeExecutable": "${execPath}",
+			"args": ["--extensionDevelopmentPath=${workspaceRoot}"],
+			"outFiles": ["${workspaceRoot}/client/out/**/*.js"],
+			"autoAttachChildProcesses": true,
+			"preLaunchTask": "tsc: build - tsconfig.json",
 		}
 	]
 }

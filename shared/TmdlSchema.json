@@ -1,0 +1,1907 @@
+{
+  "rootObjects": [
+    "Model",
+    "Table",
+    "Relationship",
+    "DataSource",
+    "Perspective",
+    "Culture",
+    "Role",
+    "Expression",
+    "QueryGroup",
+    "AnalyticsAIMetadata",
+    "Annotation",
+    "ExtendedProperty",
+    "ExcludedArtifact"
+  ],
+  "objectTypes": {
+    "Model": {
+      "requiresName": true,
+      "hasDescription": true,
+      "properties": [
+        {
+          "name": "ID",
+          "type": "String"
+        },
+        {
+          "name": "CompatibilityLevel",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": 1600
+        },
+        {
+          "name": "Language",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": 0
+        },
+        {
+          "name": "StorageLocation",
+          "type": "String"
+        },
+        {
+          "name": "DefaultMode",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "ModeType",
+          "defaultValue": "Import"
+        },
+        {
+          "name": "DefaultDataView",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "DataViewType",
+          "defaultValue": "Full"
+        },
+        {
+          "name": "Culture",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "Collation",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "DataAccessOptions",
+          "type": "Struct",
+          "children": [
+            {
+              "name": "FastCombine",
+              "type": "Scalar",
+              "scalarValueType": "Bool",
+              "defaultValue": false
+            },
+            {
+              "name": "LegacyRedirects",
+              "type": "Scalar",
+              "scalarValueType": "Bool",
+              "defaultValue": false
+            },
+            {
+              "name": "ReturnErrorValuesAsNull",
+              "type": "Scalar",
+              "scalarValueType": "Bool",
+              "defaultValue": false
+            }
+          ]
+        },
+        {
+          "name": "DefaultPowerBIDataSourceVersion",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "PowerBIDataSourceVersion",
+          "defaultValue": "PowerBI_V1"
+        },
+        {
+          "name": "ForceUniqueNames",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "DiscourageImplicitMeasures",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "DiscourageReportMeasures",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "DataSourceVariablesOverrideBehavior",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "DataSourceVariablesOverrideBehaviorType",
+          "defaultValue": "Disallow"
+        },
+        {
+          "name": "DataSourceDefaultMaxConnections",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": 10
+        },
+        {
+          "name": "SourceQueryCulture",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "MAttributes",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "DiscourageCompositeModels",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "AutomaticAggregationOptions",
+          "type": "Struct",
+          "children": [
+            {
+              "name": "QueryCoverage",
+              "type": "Scalar",
+              "scalarValueType": "Double",
+              "defaultValue": 0.0
+            },
+            {
+              "name": "DetailTableMinRows",
+              "type": "Scalar",
+              "scalarValueType": "Long",
+              "defaultValue": 0
+            },
+            {
+              "name": "AggregationTableMaxRows",
+              "type": "Scalar",
+              "scalarValueType": "Long",
+              "defaultValue": 0
+            },
+            {
+              "name": "AggregationTableSizeLimit",
+              "type": "Scalar",
+              "scalarValueType": "Long",
+              "defaultValue": 0
+            }
+          ]
+        },
+        {
+          "name": "DisableAutoExists",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": -1
+        },
+        {
+          "name": "MaxParallelismPerRefresh",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": -1
+        },
+        {
+          "name": "MaxParallelismPerQuery",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": 0
+        },
+        {
+          "name": "DisableSystemDefaultExpression",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "DefaultMeasure",
+          "type": "ModelReference",
+          "metadataObjectType": "Measure"
+        }
+      ],
+      "childObjects": [
+        "Table",
+        "Relationship",
+        "DataSource",
+        "Perspective",
+        "Culture",
+        "Role",
+        "Expression",
+        "QueryGroup",
+        "AnalyticsAIMetadata",
+        "Annotation",
+        "ExtendedProperty",
+        "ExcludedArtifact"
+      ]
+    },
+    "Table": {
+      "requiresName": true,
+      "hasDescription": true,
+      "properties": [
+        {
+          "name": "Ordinal",
+          "type": "Scalar",
+          "scalarValueType": "Int"
+        },
+        {
+          "name": "DataCategory",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "IsHidden",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "ShowAsVariationsOnly",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "IsPrivate",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "AlternateSourcePrecedence",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": 0
+        },
+        {
+          "name": "ExcludeFromModelRefresh",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "LineageTag",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "SourceLineageTag",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "SystemManaged",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "ExcludeFromAutomaticAggregations",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "DefaultDetailRowsDefinition",
+          "type": "MetadataObject",
+          "metadataObjectType": "DetailRowsDefinition"
+        },
+        {
+          "name": "RefreshPolicy",
+          "type": "MetadataObject",
+          "metadataObjectType": "RefreshPolicy",
+          "children": [
+            {
+              "name": "RollingWindowGranularity",
+              "type": "Scalar",
+              "scalarValueType": "Enum",
+              "enumType": "RefreshGranularityType",
+              "defaultValue": "Invalid"
+            },
+            {
+              "name": "RollingWindowPeriods",
+              "type": "Scalar",
+              "scalarValueType": "Int",
+              "defaultValue": 0
+            },
+            {
+              "name": "IncrementalGranularity",
+              "type": "Scalar",
+              "scalarValueType": "Enum",
+              "enumType": "RefreshGranularityType",
+              "defaultValue": "Invalid"
+            },
+            {
+              "name": "IncrementalPeriods",
+              "type": "Scalar",
+              "scalarValueType": "Int",
+              "defaultValue": 0
+            },
+            {
+              "name": "IncrementalPeriodsOffset",
+              "type": "Scalar",
+              "scalarValueType": "Int",
+              "defaultValue": 0
+            },
+            {
+              "name": "PollingExpression",
+              "type": "String",
+              "expressionLanguage": "M",
+              "defaultValue": ""
+            },
+            {
+              "name": "SourceExpression",
+              "type": "String",
+              "expressionLanguage": "M",
+              "defaultValue": ""
+            },
+            {
+              "name": "PolicyType",
+              "type": "Scalar",
+              "scalarValueType": "Enum",
+              "enumType": "RefreshPolicyType",
+              "defaultValue": "Basic"
+            },
+            {
+              "name": "Mode",
+              "type": "Scalar",
+              "scalarValueType": "Enum",
+              "enumType": "RefreshPolicyMode",
+              "defaultValue": "Import"
+            }
+          ]
+        },
+        {
+          "name": "CalculationGroup",
+          "type": "MetadataObject",
+          "metadataObjectType": "CalculationGroup",
+          "children": [
+            {
+              "name": "Precedence",
+              "type": "Scalar",
+              "scalarValueType": "Int",
+              "defaultValue": 0
+            },
+            {
+              "name": "DefaultExpression",
+              "type": "MetadataObject",
+              "metadataObjectType": "CalculationExpression",
+              "children": [
+                {
+                  "name": "FormatStringDefinition",
+                  "type": "MetadataObject",
+                  "metadataObjectType": "FormatStringDefinition"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "childObjects": [
+        "Column",
+        "Partition",
+        "Measure",
+        "Hierarchy",
+        "Annotation",
+        "ExtendedProperty",
+        "ExcludedArtifact",
+        "ChangedProperty",
+        "DetailRowsDefinition",
+        "RefreshPolicy",
+        "CalculationGroup"
+      ]
+    },
+    "Column": {
+      "requiresName": true,
+      "nameStyle": "SquareBrackets",
+      "hasDescription": true,
+      "properties": [
+        {
+          "name": "SourceColumn",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "DataType",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "DataType",
+          "defaultValue": "Unknown"
+        },
+        {
+          "name": "IsDataTypeInferred",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": true
+        },
+        {
+          "name": "DataCategory",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "IsHidden",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "IsUnique",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "IsKey",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "IsNullable",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": true
+        },
+        {
+          "name": "Alignment",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "Alignment",
+          "defaultValue": "Default"
+        },
+        {
+          "name": "TableDetailPosition",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": -1
+        },
+        {
+          "name": "IsDefaultLabel",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "IsDefaultImage",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "SummarizeBy",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "AggregateFunction",
+          "defaultValue": "Default"
+        },
+        {
+          "name": "FormatString",
+          "type": "String",
+          "expressionLanguage": "Other",
+          "defaultValue": ""
+        },
+        {
+          "name": "IsAvailableInMDX",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": true
+        },
+        {
+          "name": "KeepUniqueRows",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "DisplayOrdinal",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": 0
+        },
+        {
+          "name": "SourceProviderType",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "DisplayFolder",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "EncodingHint",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "EncodingHintType",
+          "defaultValue": "Default"
+        },
+        {
+          "name": "LineageTag",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "SourceLineageTag",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "SortByColumn",
+          "type": "ModelReference",
+          "metadataObjectType": "Column"
+        },
+        {
+          "name": "RelatedColumnDetails",
+          "type": "MetadataObject",
+          "metadataObjectType": "RelatedColumnDetails",
+          "children": [
+            {
+              "name": "GroupByColumns",
+              "type": "Collection",
+              "children": [
+                {
+                  "name": "GroupingColumn",
+                  "type": "ModelReference",
+                  "metadataObjectType": "Column"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "AlternateOf",
+          "type": "MetadataObject",
+          "metadataObjectType": "AlternateOf",
+          "children": [
+            {
+              "name": "Summarization",
+              "type": "Scalar",
+              "scalarValueType": "Enum",
+              "enumType": "SummarizationType",
+              "defaultValue": "GroupBy"
+            },
+            {
+              "name": "BaseColumn",
+              "type": "ModelReference",
+              "metadataObjectType": "Column"
+            },
+            {
+              "name": "BaseTable",
+              "type": "ModelReference",
+              "metadataObjectType": "Table"
+            }
+          ]
+        },
+        {
+          "name": "EvaluationBehavior",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "EvaluationBehavior",
+          "defaultValue": "Automatic"
+        },
+        {
+          "name": "IsNameInferred",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": true
+        }
+      ],
+      "childObjects": [
+        "Variation",
+        "Annotation",
+        "ExtendedProperty",
+        "ChangedProperty",
+        "RelatedColumnDetails",
+        "AlternateOf"
+      ]
+    },
+    "Variation": {
+      "requiresName": true,
+      "hasDescription": true,
+      "properties": [
+        {
+          "name": "IsDefault",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "Relationship",
+          "type": "ModelReference",
+          "metadataObjectType": "Relationship"
+        },
+        {
+          "name": "DefaultHierarchy",
+          "type": "ModelReference",
+          "metadataObjectType": "Hierarchy"
+        },
+        {
+          "name": "DefaultColumn",
+          "type": "ModelReference",
+          "metadataObjectType": "Column"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty"
+      ]
+    },
+    "Annotation": {
+      "requiresName": true,
+      "defaultProperty": {
+        "name": "Value",
+        "type": "String"
+      },
+      "hasDescription": false
+    },
+    "ExtendedProperty": {
+      "requiresName": true,
+      "defaultProperty": {
+        "name": "Value",
+        "type": "String"
+      },
+      "hasDescription": false,
+      "properties": [
+        {
+          "name": "Type",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "ExtendedPropertyType",
+          "defaultValue": "String"
+        }
+      ]
+    },
+    "ChangedProperty": {
+      "requiresName": false,
+      "defaultProperty": {
+        "name": "Property",
+        "type": "String"
+      },
+      "hasDescription": false
+    },
+    "RelatedColumnDetails": {
+      "requiresName": false,
+      "hasDescription": false,
+      "isSingleton": true,
+      "properties": [
+        {
+          "name": "GroupByColumns",
+          "type": "Collection",
+          "children": [
+            {
+              "name": "GroupingColumn",
+              "type": "ModelReference",
+              "metadataObjectType": "Column"
+            }
+          ]
+        }
+      ]
+    },
+    "AlternateOf": {
+      "requiresName": false,
+      "hasDescription": false,
+      "isSingleton": true,
+      "properties": [
+        {
+          "name": "Summarization",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "SummarizationType",
+          "defaultValue": "GroupBy"
+        },
+        {
+          "name": "BaseColumn",
+          "type": "ModelReference",
+          "metadataObjectType": "Column"
+        },
+        {
+          "name": "BaseTable",
+          "type": "ModelReference",
+          "metadataObjectType": "Table"
+        }
+      ],
+      "childObjects": [
+        "Annotation"
+      ]
+    },
+    "Partition": {
+      "requiresName": true,
+      "defaultProperty": {
+        "name": "SourceType",
+        "type": "Scalar",
+        "scalarValueType": "Enum",
+        "enumType": "PartitionSourceType"
+      },
+      "hasDescription": true,
+      "properties": [
+        {
+          "name": "Mode",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "ModeType",
+          "defaultValue": "Default"
+        },
+        {
+          "name": "DataView",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "DataViewType",
+          "defaultValue": "Default"
+        },
+        {
+          "name": "Expression",
+          "type": "String",
+          "expressionLanguage": "M"
+        },
+        {
+          "name": "QueryGroup",
+          "type": "ModelReference",
+          "metadataObjectType": "QueryGroup"
+        },
+        {
+          "name": "DataCoverageDefinition",
+          "type": "MetadataObject",
+          "metadataObjectType": "DataCoverageDefinition"
+        },
+        {
+          "name": "Attributes",
+          "type": "String"
+        },
+        {
+          "name": "DataSource",
+          "type": "ModelReference",
+          "metadataObjectType": "DataSource"
+        },
+        {
+          "name": "Query",
+          "type": "String",
+          "expressionLanguage": "NativeQuery"
+        },
+        {
+          "name": "EntityName",
+          "type": "String"
+        },
+        {
+          "name": "SchemaName",
+          "type": "String"
+        },
+        {
+          "name": "ExpressionSource",
+          "type": "ModelReference",
+          "metadataObjectType": "Expression"
+        },
+        {
+          "name": "Start",
+          "type": "Scalar",
+          "scalarValueType": "Date"
+        },
+        {
+          "name": "End",
+          "type": "Scalar",
+          "scalarValueType": "Date"
+        },
+        {
+          "name": "Granularity",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "RefreshGranularityType"
+        },
+        {
+          "name": "RetainDataTillForceCalculate",
+          "type": "Scalar",
+          "scalarValueType": "Bool"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty",
+        "DataCoverageDefinition"
+      ]
+    },
+    "DataCoverageDefinition": {
+      "requiresName": false,
+      "defaultProperty": {
+        "name": "Expression",
+        "type": "String",
+        "expressionLanguage": "Dax"
+      },
+      "hasDescription": true,
+      "isSingleton": true,
+      "childObjects": [
+        "Annotation"
+      ]
+    },
+    "Measure": {
+      "requiresName": true,
+      "nameStyle": "SquareBrackets",
+      "defaultProperty": {
+        "name": "Expression",
+        "type": "String",
+        "expressionLanguage": "Dax"
+      },
+      "hasDescription": true,
+      "properties": [
+        {
+          "name": "FormatString",
+          "type": "String",
+          "expressionLanguage": "Other",
+          "defaultValue": ""
+        },
+        {
+          "name": "IsHidden",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "IsSimpleMeasure",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "DisplayFolder",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "DataCategory",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "LineageTag",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "SourceLineageTag",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "KPI",
+          "type": "MetadataObject",
+          "metadataObjectType": "KPI",
+          "children": [
+            {
+              "name": "TargetDescription",
+              "type": "String",
+              "defaultValue": ""
+            },
+            {
+              "name": "TargetExpression",
+              "type": "String",
+              "expressionLanguage": "Dax",
+              "defaultValue": ""
+            },
+            {
+              "name": "TargetFormatString",
+              "type": "String",
+              "defaultValue": ""
+            },
+            {
+              "name": "StatusGraphic",
+              "type": "String",
+              "defaultValue": ""
+            },
+            {
+              "name": "StatusDescription",
+              "type": "String",
+              "defaultValue": ""
+            },
+            {
+              "name": "StatusExpression",
+              "type": "String",
+              "expressionLanguage": "Dax",
+              "defaultValue": ""
+            },
+            {
+              "name": "TrendGraphic",
+              "type": "String",
+              "defaultValue": ""
+            },
+            {
+              "name": "TrendDescription",
+              "type": "String",
+              "defaultValue": ""
+            },
+            {
+              "name": "TrendExpression",
+              "type": "String",
+              "expressionLanguage": "Dax",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "DetailRowsDefinition",
+          "type": "MetadataObject",
+          "metadataObjectType": "DetailRowsDefinition"
+        },
+        {
+          "name": "FormatStringDefinition",
+          "type": "MetadataObject",
+          "metadataObjectType": "FormatStringDefinition"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty",
+        "ChangedProperty",
+        "KPI",
+        "DetailRowsDefinition",
+        "FormatStringDefinition"
+      ]
+    },
+    "KPI": {
+      "requiresName": false,
+      "hasDescription": true,
+      "isSingleton": true,
+      "properties": [
+        {
+          "name": "TargetDescription",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "TargetExpression",
+          "type": "String",
+          "expressionLanguage": "Dax",
+          "defaultValue": ""
+        },
+        {
+          "name": "TargetFormatString",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "StatusGraphic",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "StatusDescription",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "StatusExpression",
+          "type": "String",
+          "expressionLanguage": "Dax",
+          "defaultValue": ""
+        },
+        {
+          "name": "TrendGraphic",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "TrendDescription",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "TrendExpression",
+          "type": "String",
+          "expressionLanguage": "Dax",
+          "defaultValue": ""
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty"
+      ]
+    },
+    "DetailRowsDefinition": {
+      "requiresName": false,
+      "defaultProperty": {
+        "name": "Expression",
+        "type": "String",
+        "expressionLanguage": "Dax"
+      },
+      "hasDescription": false,
+      "isSingleton": true
+    },
+    "FormatStringDefinition": {
+      "requiresName": false,
+      "defaultProperty": {
+        "name": "Expression",
+        "type": "String",
+        "expressionLanguage": "Dax"
+      },
+      "hasDescription": false,
+      "isSingleton": true
+    },
+    "Hierarchy": {
+      "requiresName": true,
+      "hasDescription": true,
+      "properties": [
+        {
+          "name": "IsHidden",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "DisplayFolder",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "HideMembers",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "HierarchyHideMembersType",
+          "defaultValue": "Default"
+        },
+        {
+          "name": "LineageTag",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "SourceLineageTag",
+          "type": "String",
+          "defaultValue": ""
+        }
+      ],
+      "childObjects": [
+        "Level",
+        "Annotation",
+        "ExtendedProperty",
+        "ExcludedArtifact",
+        "ChangedProperty"
+      ]
+    },
+    "Level": {
+      "requiresName": true,
+      "hasDescription": true,
+      "properties": [
+        {
+          "name": "Ordinal",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": -1
+        },
+        {
+          "name": "LineageTag",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "SourceLineageTag",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "Column",
+          "type": "ModelReference",
+          "metadataObjectType": "Column"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty",
+        "ChangedProperty"
+      ]
+    },
+    "ExcludedArtifact": {
+      "requiresName": false,
+      "hasDescription": false,
+      "properties": [
+        {
+          "name": "ArtifactType",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "ObjectType",
+          "defaultValue": "Null"
+        },
+        {
+          "name": "Reference",
+          "type": "String",
+          "defaultValue": ""
+        }
+      ]
+    },
+    "RefreshPolicy": {
+      "requiresName": false,
+      "hasDescription": false,
+      "isSingleton": true,
+      "properties": [
+        {
+          "name": "RollingWindowGranularity",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "RefreshGranularityType",
+          "defaultValue": "Invalid"
+        },
+        {
+          "name": "RollingWindowPeriods",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": 0
+        },
+        {
+          "name": "IncrementalGranularity",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "RefreshGranularityType",
+          "defaultValue": "Invalid"
+        },
+        {
+          "name": "IncrementalPeriods",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": 0
+        },
+        {
+          "name": "IncrementalPeriodsOffset",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": 0
+        },
+        {
+          "name": "PollingExpression",
+          "type": "String",
+          "expressionLanguage": "M",
+          "defaultValue": ""
+        },
+        {
+          "name": "SourceExpression",
+          "type": "String",
+          "expressionLanguage": "M",
+          "defaultValue": ""
+        },
+        {
+          "name": "PolicyType",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "RefreshPolicyType",
+          "defaultValue": "Basic"
+        },
+        {
+          "name": "Mode",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "RefreshPolicyMode",
+          "defaultValue": "Import"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty"
+      ]
+    },
+    "CalculationGroup": {
+      "requiresName": false,
+      "hasDescription": true,
+      "isSingleton": true,
+      "properties": [
+        {
+          "name": "Precedence",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": 0
+        },
+        {
+          "name": "DefaultExpression",
+          "type": "MetadataObject",
+          "metadataObjectType": "CalculationExpression",
+          "children": [
+            {
+              "name": "FormatStringDefinition",
+              "type": "MetadataObject",
+              "metadataObjectType": "FormatStringDefinition"
+            }
+          ]
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "CalculationItem",
+        "CalculationExpression"
+      ]
+    },
+    "CalculationItem": {
+      "requiresName": true,
+      "defaultProperty": {
+        "name": "Expression",
+        "type": "String",
+        "expressionLanguage": "Dax"
+      },
+      "hasDescription": true,
+      "properties": [
+        {
+          "name": "Ordinal",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": -1
+        },
+        {
+          "name": "FormatStringDefinition",
+          "type": "MetadataObject",
+          "metadataObjectType": "FormatStringDefinition"
+        }
+      ],
+      "childObjects": [
+        "FormatStringDefinition"
+      ]
+    },
+    "CalculationExpression": {
+      "requiresName": false,
+      "defaultProperty": {
+        "name": "Expression",
+        "type": "String",
+        "expressionLanguage": "Dax"
+      },
+      "hasDescription": true,
+      "isSingleton": true,
+      "properties": [
+        {
+          "name": "FormatStringDefinition",
+          "type": "MetadataObject",
+          "metadataObjectType": "FormatStringDefinition"
+        }
+      ],
+      "childObjects": [
+        "FormatStringDefinition"
+      ]
+    },
+    "Relationship": {
+      "requiresName": true,
+      "hasDescription": false,
+      "properties": [
+        {
+          "name": "FromColumn",
+          "type": "ModelReference",
+          "metadataObjectType": "Column"
+        },
+        {
+          "name": "ToColumn",
+          "type": "ModelReference",
+          "metadataObjectType": "Column"
+        },
+        {
+          "name": "FromCardinality",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "RelationshipEndCardinality",
+          "defaultValue": "Many"
+        },
+        {
+          "name": "ToCardinality",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "RelationshipEndCardinality",
+          "defaultValue": "One"
+        },
+        {
+          "name": "IsActive",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": true
+        },
+        {
+          "name": "CrossFilteringBehavior",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "CrossFilteringBehavior",
+          "defaultValue": "OneDirection"
+        },
+        {
+          "name": "JoinOnDateBehavior",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "DateTimeRelationshipBehavior",
+          "defaultValue": "DateAndTime"
+        },
+        {
+          "name": "RelyOnReferentialIntegrity",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "SecurityFilteringBehavior",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "SecurityFilteringBehavior",
+          "defaultValue": "OneDirection"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty",
+        "ChangedProperty"
+      ]
+    },
+    "DataSource": {
+      "requiresName": true,
+      "defaultProperty": {
+        "name": "Type",
+        "type": "Scalar",
+        "scalarValueType": "Enum",
+        "enumType": "DataSourceType"
+      },
+      "hasDescription": true,
+      "properties": [
+        {
+          "name": "Type",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "DataSourceType",
+          "defaultValue": "Structured"
+        },
+        {
+          "name": "ConnectionDetails",
+          "type": "Struct",
+          "children": [
+            {
+              "name": "Protocol",
+              "type": "String",
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Options",
+          "type": "Struct"
+        },
+        {
+          "name": "Credential",
+          "type": "Struct",
+          "children": [
+            {
+              "name": "AuthenticationKind",
+              "type": "String"
+            },
+            {
+              "name": "PrivacySetting",
+              "type": "String"
+            },
+            {
+              "name": "Username",
+              "type": "String"
+            },
+            {
+              "name": "Password",
+              "type": "String"
+            },
+            {
+              "name": "EncryptConnection",
+              "type": "Scalar",
+              "scalarValueType": "Bool",
+              "defaultValue": false
+            }
+          ]
+        },
+        {
+          "name": "ContextExpression",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "MaxConnections",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": 10
+        },
+        {
+          "name": "ConnectionString",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "ImpersonationMode",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "ImpersonationMode",
+          "defaultValue": "Default"
+        },
+        {
+          "name": "Account",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "Isolation",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "DatasourceIsolation",
+          "defaultValue": "ReadCommitted"
+        },
+        {
+          "name": "Timeout",
+          "type": "Scalar",
+          "scalarValueType": "Int",
+          "defaultValue": 0
+        },
+        {
+          "name": "Provider",
+          "type": "String",
+          "defaultValue": ""
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty"
+      ]
+    },
+    "Perspective": {
+      "requiresName": true,
+      "hasDescription": true,
+      "childObjects": [
+        "PerspectiveTable",
+        "Annotation",
+        "ExtendedProperty"
+      ]
+    },
+    "PerspectiveTable": {
+      "requiresName": true,
+      "hasDescription": false,
+      "properties": [
+        {
+          "name": "IncludeAll",
+          "type": "Scalar",
+          "scalarValueType": "Bool",
+          "defaultValue": false
+        },
+        {
+          "name": "Table",
+          "type": "ModelReference",
+          "metadataObjectType": "Table"
+        }
+      ],
+      "childObjects": [
+        "PerspectiveColumn",
+        "PerspectiveMeasure",
+        "PerspectiveHierarchy",
+        "Annotation",
+        "ExtendedProperty"
+      ]
+    },
+    "PerspectiveColumn": {
+      "requiresName": true,
+      "hasDescription": false,
+      "properties": [
+        {
+          "name": "Column",
+          "type": "ModelReference",
+          "metadataObjectType": "Column"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty"
+      ]
+    },
+    "PerspectiveMeasure": {
+      "requiresName": true,
+      "hasDescription": false,
+      "properties": [
+        {
+          "name": "Measure",
+          "type": "ModelReference",
+          "metadataObjectType": "Measure"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty"
+      ]
+    },
+    "PerspectiveHierarchy": {
+      "requiresName": true,
+      "hasDescription": false,
+      "properties": [
+        {
+          "name": "Hierarchy",
+          "type": "ModelReference",
+          "metadataObjectType": "Hierarchy"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty"
+      ]
+    },
+    "Culture": {
+      "requiresName": true,
+      "hasDescription": false,
+      "properties": [
+        {
+          "name": "LinguisticMetadata",
+          "type": "MetadataObject",
+          "metadataObjectType": "LinguisticMetadata",
+          "children": [
+            {
+              "name": "Content",
+              "type": "String",
+              "expressionLanguage": "XmlOrJson",
+              "defaultValue": ""
+            },
+            {
+              "name": "ContentType",
+              "type": "Scalar",
+              "scalarValueType": "Enum",
+              "enumType": "ContentType",
+              "defaultValue": "Xml"
+            }
+          ]
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty",
+        "LinguisticMetadata"
+      ]
+    },
+    "LinguisticMetadata": {
+      "requiresName": false,
+      "hasDescription": false,
+      "isSingleton": true,
+      "properties": [
+        {
+          "name": "Content",
+          "type": "String",
+          "expressionLanguage": "XmlOrJson",
+          "defaultValue": ""
+        },
+        {
+          "name": "ContentType",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "ContentType",
+          "defaultValue": "Xml"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty"
+      ]
+    },
+    "Role": {
+      "requiresName": true,
+      "hasDescription": true,
+      "properties": [
+        {
+          "name": "ModelPermission",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "ModelPermission",
+          "defaultValue": "None"
+        }
+      ],
+      "childObjects": [
+        "TablePermission",
+        "Annotation",
+        "ExtendedProperty"
+      ]
+    },
+    "TablePermission": {
+      "requiresName": true,
+      "defaultProperty": {
+        "name": "FilterExpression",
+        "type": "String",
+        "expressionLanguage": "Dax"
+      },
+      "hasDescription": false,
+      "properties": [
+        {
+          "name": "MetadataPermission",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "MetadataPermission",
+          "defaultValue": "Default"
+        },
+        {
+          "name": "Table",
+          "type": "ModelReference",
+          "metadataObjectType": "Table"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty",
+        "ColumnPermission"
+      ]
+    },
+    "ColumnPermission": {
+      "requiresName": true,
+      "defaultProperty": {
+        "name": "MetadataPermission",
+        "type": "Scalar",
+        "scalarValueType": "Enum",
+        "enumType": "MetadataPermission"
+      },
+      "hasDescription": false,
+      "properties": [
+        {
+          "name": "Column",
+          "type": "ModelReference",
+          "metadataObjectType": "Column"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty"
+      ]
+    },
+    "Expression": {
+      "requiresName": true,
+      "defaultProperty": {
+        "name": "Expression",
+        "type": "String",
+        "expressionLanguage": "M"
+      },
+      "hasDescription": true,
+      "properties": [
+        {
+          "name": "Kind",
+          "type": "Scalar",
+          "scalarValueType": "Enum",
+          "enumType": "ExpressionKind",
+          "defaultValue": -1
+        },
+        {
+          "name": "MAttributes",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "LineageTag",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "SourceLineageTag",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "RemoteParameterName",
+          "type": "String",
+          "defaultValue": ""
+        },
+        {
+          "name": "QueryGroup",
+          "type": "ModelReference",
+          "metadataObjectType": "QueryGroup"
+        },
+        {
+          "name": "ParameterValuesColumn",
+          "type": "ModelReference",
+          "metadataObjectType": "Column"
+        },
+        {
+          "name": "ExpressionSource",
+          "type": "ModelReference",
+          "metadataObjectType": "Expression"
+        }
+      ],
+      "childObjects": [
+        "Annotation",
+        "ExtendedProperty",
+        "ExcludedArtifact"
+      ]
+    },
+    "QueryGroup": {
+      "requiresName": true,
+      "hasDescription": true,
+      "childObjects": [
+        "Annotation"
+      ]
+    },
+    "AnalyticsAIMetadata": {
+      "requiresName": true,
+      "hasDescription": false,
+      "properties": [
+        {
+          "name": "MeasureAnalysisDefinition",
+          "type": "String",
+          "defaultValue": ""
+        }
+      ]
+    }
+  },
+  "enums": {
+    "ModeType": [
+      "Import",
+      "DirectQuery",
+      "Default",
+      "Push",
+      "Dual",
+      "DirectLake"
+    ],
+    "DataViewType": [
+      "Full",
+      "Sample",
+      "Default"
+    ],
+    "PowerBIDataSourceVersion": [
+      "PowerBI_V1",
+      "PowerBI_V2",
+      "PowerBI_V3"
+    ],
+    "DataSourceVariablesOverrideBehaviorType": [
+      "Disallow",
+      "Allow"
+    ],
+    "RefreshGranularityType": [
+      "Day",
+      "Month",
+      "Quarter",
+      "Year",
+      "Invalid"
+    ],
+    "RefreshPolicyType": [
+      "Basic"
+    ],
+    "RefreshPolicyMode": [
+      "Import",
+      "Hybrid"
+    ],
+    "DataType": [
+      "Automatic",
+      "String",
+      "Int64",
+      "Double",
+      "DateTime",
+      "Decimal",
+      "Boolean",
+      "Binary",
+      "Unknown",
+      "Variant"
+    ],
+    "Alignment": [
+      "Default",
+      "Left",
+      "Right",
+      "Center"
+    ],
+    "AggregateFunction": [
+      "Default",
+      "None",
+      "Sum",
+      "Min",
+      "Max",
+      "Count",
+      "Average",
+      "DistinctCount"
+    ],
+    "EncodingHintType": [
+      "Default",
+      "Hash",
+      "Value"
+    ],
+    "SummarizationType": [
+      "GroupBy",
+      "Sum",
+      "Count",
+      "Min",
+      "Max"
+    ],
+    "EvaluationBehavior": [
+      "Automatic",
+      "Static",
+      "Dynamic"
+    ],
+    "ExtendedPropertyType": [
+      "String",
+      "Json"
+    ],
+    "HierarchyHideMembersType": [
+      "Default",
+      "HideBlankMembers"
+    ],
+    "ObjectType": [
+      "Null",
+      "Model",
+      "DataSource",
+      "Table",
+      "Column",
+      "AttributeHierarchy",
+      "Partition",
+      "Relationship",
+      "Measure",
+      "Hierarchy",
+      "Level",
+      "Annotation",
+      "KPI",
+      "Culture",
+      "ObjectTranslation",
+      "LinguisticMetadata",
+      "Perspective",
+      "PerspectiveTable",
+      "PerspectiveColumn",
+      "PerspectiveHierarchy",
+      "PerspectiveMeasure",
+      "Role",
+      "RoleMembership",
+      "TablePermission",
+      "Variation",
+      "Set",
+      "PerspectiveSet",
+      "ExtendedProperty",
+      "Expression",
+      "ColumnPermission",
+      "DetailRowsDefinition",
+      "RelatedColumnDetails",
+      "GroupByColumn",
+      "CalculationGroup",
+      "CalculationItem",
+      "AlternateOf",
+      "RefreshPolicy",
+      "FormatStringDefinition",
+      "QueryGroup",
+      "AnalyticsAIMetadata",
+      "ChangedProperty",
+      "ExcludedArtifact",
+      "DataCoverageDefinition",
+      "CalculationExpression",
+      "Database"
+    ],
+    "RelationshipEndCardinality": [
+      "None",
+      "One",
+      "Many"
+    ],
+    "CrossFilteringBehavior": [
+      "OneDirection",
+      "BothDirections",
+      "Automatic"
+    ],
+    "DateTimeRelationshipBehavior": [
+      "DateAndTime",
+      "DatePartOnly"
+    ],
+    "SecurityFilteringBehavior": [
+      "OneDirection",
+      "BothDirections",
+      "None"
+    ],
+    "DataSourceType": [
+      "Provider",
+      "Structured"
+    ],
+    "ImpersonationMode": [
+      "Default",
+      "ImpersonateAccount",
+      "ImpersonateAnonymous",
+      "ImpersonateCurrentUser",
+      "ImpersonateServiceAccount",
+      "ImpersonateUnattendedAccount"
+    ],
+    "DatasourceIsolation": [
+      "ReadCommitted",
+      "Snapshot"
+    ],
+    "ContentType": [
+      "Xml",
+      "Json"
+    ],
+    "ModelPermission": [
+      "None",
+      "Read",
+      "ReadRefresh",
+      "Refresh",
+      "Administrator"
+    ],
+    "MetadataPermission": [
+      "Default",
+      "None",
+      "Read"
+    ],
+    "ExpressionKind": [
+      "M"
+    ]
+  }
+}
