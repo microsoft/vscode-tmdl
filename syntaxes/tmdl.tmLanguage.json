@@ -15,6 +15,9 @@
 			"include": "#expression-properties"
 		},
 		{
+			"include": "#formatstring-expression"
+		},
+		{
 			"include": "#descriptions"
 		},
 		{
@@ -77,7 +80,33 @@
 			]			
 		},
 		"expression-properties":{
-			"begin": "^(?i:(\\s+)(expression|content|formatString)\\s*(:)(=))",
+			"begin": "^(?i:(\\s+)(Expression|Content|Source\\b|LinguisticMetadata|ChangedProperty)\\s*(=))",
+			"beginCaptures": {
+				"1": {
+					"name": "whitespace.leading.tmdl"
+				},
+				"2": {
+					"name": "variable.property.expression.tmdl"
+				},
+				"3": {
+					"name": "keyword.operator.assignment.tmdl"
+				}
+			},
+			"end": "^(?=\\S)|(?!\\G)",
+			"patterns": [
+				{
+					"include": "#delimited-expression"
+				},
+				{
+					"include": "#non-delimited-expression"
+				},
+				{
+					"include": "#base-expression"
+				}
+			]		
+		},
+		"formatstring-expression":{
+			"begin": "^(?i:(\\s+)(FormatString)\\s*(:))",
 			"beginCaptures": {
 				"1": {
 					"name": "whitespace.leading.tmdl"
@@ -87,9 +116,6 @@
 				},
 				"3": {
 					"name": "keyword.operator.colon.tmdl"
-				},
-				"4": {
-					"name": "keyword.operator.assignment.tmdl"
 				}
 			},
 			"end": "^(?=\\S)|(?!\\G)",
@@ -204,7 +230,7 @@
 				{
 					"include": "#non-delimited-expression"
 				},
-				{
+				{ 
 					"include": "#base-expression"
 				}
 			]				
