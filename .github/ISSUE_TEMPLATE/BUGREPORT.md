@@ -6,7 +6,7 @@ labels: bug
 assignees: ''
 ---
 
-### version
+### Version
 Specify the version of the extension
 
 ### Description
