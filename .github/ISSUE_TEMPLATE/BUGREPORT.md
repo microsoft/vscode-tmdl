@@ -4,9 +4,11 @@ about: Report a bug to help us improve
 title: "[Bug]: "
 labels: bug
 assignees: ''
-version: ''
 ---
- 
+
+### version
+Specify the version of the extension
+
 ### Description
 A clear and concise description of the bug.
  
