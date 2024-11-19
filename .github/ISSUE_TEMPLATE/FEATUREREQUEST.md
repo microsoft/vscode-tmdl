@@ -4,9 +4,11 @@ about: Suggest an idea for this project
 title: "[Feature]: "
 labels: enhancement
 assignees: ''
-version: ''
 ---
- 
+
+### Version
+Specify the version of the extension
+
 ### Description
 A clear and concise description of the feature.
  
