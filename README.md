@@ -16,12 +16,15 @@ A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?item
 - **Code Formatting**: Automatically organizes TMDL code for enhanced readability and consistency  
 - **Hover Information**: Provides detailed context and information for TMDL tokens on mouse hover  
 - **Code Actions**: Provides quick fixes and refactoring options for common TMDL issues  
-- **Breadcrumb Navigation**: Displays the hierarchical structure of TMDL code for easy navigation  
-- **Power Query Support**: Enhances readability of Power Query embedded within TMDL  
-- **Power Query Support**: Provides syntax error identification for Power Query expressions within TMDL  
-- **Power Query Support**: Enhanced formatting for embedded Power Query expressions within TMDL  
-- **Power Query Support**: Offers context-aware Power Query tokens and functions suggestions  
-- **Localization of Diagnostics**: Localizes error messages based on the user's language setting  
+- **Breadcrumbs**: Displays the hierarchical structure of TMDL code for easy navigation  
+- **Power Query Highlighting**: Enhances readability of Power Query embedded within TMDL  
+- **Power Query Diagnostics**: Provides syntax error identification for Power Query expressions within TMDL  
+- **Power Query Formatting**: Enhanced formatting for embedded Power Query expressions within TMDL  
+- **Power Query Autocomplete**: Offers context-aware Power Query tokens and functions suggestions  
+- **Power Query Hover**: Provides detailed context and information for Power Query tokens on mouse hover  
+- **Error Diagnostics Localization**: Localizes error messages based on the user's language setting  
+
+More features coming soon!
 
 ## Code Structure
 
@@ -45,9 +48,26 @@ A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?item
 | syntaxes            | Syntax definition files.                            |
 |                     | - `tmdl.tmLanguage.json`                            |
 
-## Contributing
+## Note
 
-Please log an issues for this feature on [Issues Tab](https://github.com/microsoft/vscode-tmdl/issues)
+Users must update their `locale` setting separately for Power Query in the VS Code extension to enable localization.
+
+## Limitations
+
+Currently, the extension on web supports only syntax highlighting. Additional features will be added in future releases.
+The Power Query Autocomplete feature may occasionally display 'No suggestion' in uncommon scenarios.
+
+## Documentation
+
+* Learn more about TMDL from the [TMDL Docs](https://go.microsoft.com/fwlink/?linkid=2295924).
+* Learn more about how to use TMDL with PBIP and Desktop Developer Mode from the [Developer Mode Docs](https://go.microsoft.com/fwlink/?linkid=2296020). 
+* See our [blog post](https://go.microsoft.com/fwlink/?linkid=2296022) to learn more!
+
+## Issues
+
+Feedback is welcome and appreciated! If you come across an issue/bug with the extension or have a feature request, please [file an issue](https://github.com/microsoft/vscode-tmdl/issues). 
+
+## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
