@@ -6,7 +6,7 @@
 
 ![TMDL Extension for Visual Studio Code](./images/TMDLExtensionforVisualStudioCode.png "TMDL Extension for Visual Studio Code")
 
-A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=analysis-services.TMDL) that adds language support for the [Tabular Model Definition Language (TMDL)](https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-tmdl-view).
+A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=analysis-services.TMDL) that adds language support for the Tabular Model Definition Language (TMDL)
 
 # Features
 
