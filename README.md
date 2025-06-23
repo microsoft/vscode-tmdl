@@ -12,17 +12,23 @@ A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?item
 
 - **Semantic Highlighting**: Improves TMDL readability with context-aware coloring  
 - **Error Diagnostics**: Highlights errors that will cause TMDL serialization to fail  
-- **Autocomplete**: Offers intelligent TMDL token completion suggestions  
-- **Code Formatting**: Automatically organizes TMDL code for enhanced readability and consistency  
-- **Hover Information**: Provides detailed context and information for TMDL tokens on mouse hover  
+- **Autocomplete**: Offers intelligent TMDL token completion suggestions
+- **Power Query Autocomplete**: Offers context-aware Power Query tokens and functions suggestions
+  ![Autocomplete](./images/Autocomplete.gif)
+- **Code Formatting**: Automatically organizes TMDL code for enhanced readability and consistency
+- **Power Query Formatting**: Enhanced formatting for embedded Power Query expressions within TMDL
+  ![Code Formatting](./images/Codeformatting.gif)
+- **Hover Information**: Provides detailed context and information for TMDL tokens on mouse hover
+- **Power Query Hover**: Provides detailed context and information for Power Query tokens on mouse hover  
+  ![Hover Details](./images/HoverProvider.gif)
 - **Code Actions**: Provides quick fixes and refactoring options for common TMDL issues  
+  ![Code Actions](./images/CodeActions.gif)
 - **Breadcrumbs**: Displays the hierarchical structure of TMDL code for easy navigation  
+  ![Breadcrumbs](./images/Breadcrumbs.gif)
 - **Power Query Highlighting**: Enhances readability of Power Query embedded within TMDL  
 - **Power Query Diagnostics**: Provides syntax error identification for Power Query expressions within TMDL  
-- **Power Query Formatting**: Enhanced formatting for embedded Power Query expressions within TMDL  
-- **Power Query Autocomplete**: Offers context-aware Power Query tokens and functions suggestions  
-- **Power Query Hover**: Provides detailed context and information for Power Query tokens on mouse hover  
 - **Error Diagnostics Localization**: Localizes error messages based on the user's language setting  
+  ![Localization](./images/Localization.gif)
 
 More features coming soon!
 
