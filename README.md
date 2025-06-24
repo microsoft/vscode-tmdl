@@ -11,26 +11,12 @@ A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?item
 # Features
 
 - **Semantic Highlighting**: Improves TMDL readability with context-aware coloring  
-- **Error Diagnostics**: Highlights errors that will cause TMDL serialization to fail  
-- **Autocomplete**: Offers intelligent TMDL token completion suggestions
-- **Power Query Autocomplete**: Offers context-aware Power Query tokens and functions suggestions
-  ![Autocomplete](./images/Autocomplete.gif)
-- **Code Formatting**: Automatically organizes TMDL code for enhanced readability and consistency
-- **Power Query Formatting**: Enhanced formatting for embedded Power Query expressions within TMDL
-  ![Code Formatting](./images/Codeformatting.gif)
-- **Hover Information**: Provides detailed context and information for TMDL tokens on mouse hover
-- **Power Query Hover**: Provides detailed context and information for Power Query tokens on mouse hover  
-  ![Hover Details](./images/HoverProvider.gif)
-- **Code Actions**: Provides quick fixes and refactoring options for common TMDL issues  
-  ![Code Actions](./images/CodeActions.gif)
-- **Breadcrumbs**: Displays the hierarchical structure of TMDL code for easy navigation  
-  ![Breadcrumbs](./images/Breadcrumbs.gif)
-- **Power Query Highlighting**: Enhances readability of Power Query embedded within TMDL  
-- **Power Query Diagnostics**: Provides syntax error identification for Power Query expressions within TMDL  
-- **Error Diagnostics Localization**: Localizes error messages based on the user's language setting  
-  ![Localization](./images/Localization.gif)
-
-More features coming soon!
+- **Error Diagnostics**: Highlights TMDL language errors - see [Error Diagnostics](#error-diagnostics)
+- **Code Formatting**: Automatically organizes TMDL code - see [Code Formatting](#code-formatting)
+- **Autocomplete**: Offers intelligent auto completion suggestions - see [Autocomplete](#autocomplete)
+- **Hover Information**: Provides contextual information on mouse hover - see [Hover Information](#hover-information)
+- **Code Actions**: Provides quick fixes and refactoring options for common TMDL issues - see [Code Actions](#code-actions)
+- **Breadcrumbs**: Allow easy navigation within a TMDL document - see [Breadcrumbs](#breadcrumbs)
 
 ## Code Structure
 
@@ -54,9 +40,37 @@ More features coming soon!
 | syntaxes            | Syntax definition files.                            |
 |                     | - `tmdl.tmLanguage.json`                            |
 
-## Note
+# Error Diagnostics
+![Diagnostics](./images/Diagnostics.gif)
+Identifies and highlights errors in TMDL code directly within the editor.
+Also detects syntax issues in embedded Power Query, with DAX diagnostics support on the way.
+Error messages are shown in the user's language based on locale settings.
 
-Users must update their `locale` setting separately for Power Query in the VS Code extension to enable localization.
+    ## Note
+
+    Users must update their `locale` setting separately for Power Query in the VS Code extension to enable localization.
+
+# Code Formatting
+![Code Formatting](./images/Codeformatting.gif)
+Automatically organizes TMDL code for enhanced readability and consistency along with enhanced formatting for embedded Power Query within TMDL with soon integration of DAX query formatting.
+# Autocomplete
+![Autocomplete](./images/Autocomplete.gif)
+Provides smart, context-aware suggestions while editing TMDL documents.
+Autocomplete support also includes embedded Power Query, and will soon expand to include DAX queries.
+# Hover Information
+![Hover Information](./images/HoverProvider.gif)
+Displays helpful contextual information when hovering over elements in TMDL documents.
+Supports both TMDL and embedded Power Query, with future plans to support DAX as well.
+# Code Actions
+![Code Actions](./images/CodeActions.gif)
+Offers quick fixes and refactoring suggestions for common TMDL issues. Examples include:
+  1. Resolving duplicated lineage tags
+  2. Correcting misspelled properties
+  3. Adding missing syntax elements like colons, quotes, equal signs, etc.
+And many more helpful fixes.
+# Breadcrumbs
+![Breadcrumbs](./images/Breadcrumbs.gif)
+Allows easy navigation within a TMDL document showing the hierarchical structure of TMDL code
 
 ## Limitations
 
