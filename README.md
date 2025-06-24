@@ -4,12 +4,13 @@
 [![Downloads](https://img.shields.io/visual-studio-marketplace/d/analysis-services.TMDL)](https://marketplace.visualstudio.com/items?itemName=analysis-services.TMDL)
 [![Ratings](https://img.shields.io/visual-studio-marketplace/r/analysis-services.TMDL)](https://marketplace.visualstudio.com/items?itemName=analysis-services.TMDL)
 
-![TMDL Extension for Visual Studio Code](./images/TMDLExtensionforVisualStudioCode.png "TMDL Extension for Visual Studio Code")
-
 A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=analysis-services.TMDL) that adds language support for the Tabular Model Definition Language (TMDL)
+
+![TMDL Extension for Visual Studio Code](./images/TMDLExtensionforVisualStudioCode.png "TMDL Extension for Visual Studio Code")
 
 > **Note:** This repository will eventually host the source code for the TMDL Language Extension.  
 > For now, it serves only as a central location for tracking bugs and gathering feedback.
+> This project is in Public Preview and implementation may significantly change prior to General Availability.
 
 # Features
 
@@ -20,6 +21,12 @@ A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?item
 - **Code Actions**: Provides quick fixes and refactoring options for common TMDL issues such as duplicated lineage tag or misspelled property- see [Code Actions](#code-actions)
 - **Breadcrumbs**: Allow easy navigation within a TMDL document - see [Breadcrumbs](#breadcrumbs)
 - **Hover Information**: Provides contextual information on mouse hover - see [Hover Information](#hover-information)
+
+## 🚧 Coming soon
+- **Find References** 
+- **Context-Award Renaming** 
+- **Context-Award Delete Action** 
+- **Advanced Autocomplete** 
 
 # Semantic Highlighting
 ![Semantic Highlighting](./images/Semantichighlighting.gif)
@@ -55,6 +62,16 @@ And many more helpful fixes.
 # Breadcrumbs
 ![Breadcrumbs](./images/Breadcrumbs.gif)
 Allows easy navigation within a TMDL document showing the hierarchical structure of TMDL code
+
+## Getting Started
+
+### Prerequisites
+1. Install either the stable or Insiders release of VS Code:
+   * [💫 Stable release](https://code.visualstudio.com/download)
+   * [🔮 Insiders release](https://code.visualstudio.com/insiders)
+2. Install the [TMDL View VSCode Extension](https://marketplace.visualstudio.com/items?itemName=analysis-services.TMDL) extension
+3. When you open TMDL documents with Visual Studio Code after setting up the extension, your TMDL documents will have syntax highlighting:
+![TMDL Syntax Highlighting](./images/tmdlInVSCode.png)
 
 ## Limitations
 
