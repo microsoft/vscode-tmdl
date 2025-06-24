@@ -8,37 +8,22 @@
 
 A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=analysis-services.TMDL) that adds language support for the Tabular Model Definition Language (TMDL)
 
+> **Note:** This repository will eventually host the source code for the TMDL Language Extension.  
+> For now, it serves only as a central location for tracking bugs and gathering feedback.
+
 # Features
 
-- **Code Formatting**: Automatically organizes TMDL code - see [Code Formatting](#code-formatting)
-- **Semantic Highlighting**: Improves TMDL readability with context-aware coloring  
-- **Error Diagnostics**: Highlights TMDL language errors - see [Error Diagnostics](#error-diagnostics)
+- **Semantic Highlighting**: Improves TMDL readability with context-aware coloring - see [Semantic Highlighting](#semantic-highlighting)  
 - **Autocomplete**: Offers intelligent auto completion suggestions - see [Autocomplete](#autocomplete)
-- **Hover Information**: Provides contextual information on mouse hover - see [Hover Information](#hover-information)
+- **Error Diagnostics**: Highlights TMDL language errors - see [Error Diagnostics](#error-diagnostics)
+- **Code Formatting**: Automatically organizes TMDL code - see [Code Formatting](#code-formatting)
 - **Code Actions**: Provides quick fixes and refactoring options for common TMDL issues such as duplicated lineage tag or misspelled property- see [Code Actions](#code-actions)
 - **Breadcrumbs**: Allow easy navigation within a TMDL document - see [Breadcrumbs](#breadcrumbs)
+- **Hover Information**: Provides contextual information on mouse hover - see [Hover Information](#hover-information)
 
-## Code Structure
-
-| Directory           | Description                                         |
-|---------------------|-----------------------------------------------------|
-| Root                | Essential project files and documentation.         |
-|                     | - `.gitignore`                                      |
-|                     | - `CODE_OF_CONDUCT.md`                             |
-|                     | - `LICENSE`                                         |
-|                     | - `package.json`                                    |
-|                     | - `README.md`                                       |
-|                     | - `SECURITY.md`                                     |
-|                     | - `SUPPORT.md`                                      |
-|                     |
-| .vscode             | VSCode-specific configuration files.                |
-|                     | - `launch.json`                                     |
-|                     |
-| config              | Project configuration files.                        |
-|                     | - `tmdl-configuration.json`                         |
-|                     |
-| syntaxes            | Syntax definition files.                            |
-|                     | - `tmdl.tmLanguage.json`                            |
+# Semantic Highlighting
+![Semantic Highlighting](./images/Semantichighlighting.gif)
+Improves TMDL readability with context-aware syntax coloring
 
 # Code Formatting
 ![Code Formatting](./images/Codeformatting.gif)
