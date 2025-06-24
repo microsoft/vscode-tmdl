@@ -46,9 +46,7 @@ Identifies and highlights errors in TMDL code directly within the editor.
 Also detects syntax issues in embedded Power Query, with DAX diagnostics support on the way.
 Error messages are shown in the user's language based on locale settings.
 
-    ## Note
-
-    Users must update their `locale` setting separately for Power Query in the VS Code extension to enable localization.
+> **Note:** Users must update their `locale` setting separately for Power Query in the VS Code extension to enable localization.
 
 # Code Formatting
 ![Code Formatting](./images/Codeformatting.gif)
