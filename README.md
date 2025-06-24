@@ -10,12 +10,12 @@ A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?item
 
 # Features
 
+- **Code Formatting**: Automatically organizes TMDL code - see [Code Formatting](#code-formatting)
 - **Semantic Highlighting**: Improves TMDL readability with context-aware coloring  
 - **Error Diagnostics**: Highlights TMDL language errors - see [Error Diagnostics](#error-diagnostics)
-- **Code Formatting**: Automatically organizes TMDL code - see [Code Formatting](#code-formatting)
 - **Autocomplete**: Offers intelligent auto completion suggestions - see [Autocomplete](#autocomplete)
 - **Hover Information**: Provides contextual information on mouse hover - see [Hover Information](#hover-information)
-- **Code Actions**: Provides quick fixes and refactoring options for common TMDL issues - see [Code Actions](#code-actions)
+- **Code Actions**: Provides quick fixes and refactoring options for common TMDL issues such as duplicated lineage tag or misspelled property- see [Code Actions](#code-actions)
 - **Breadcrumbs**: Allow easy navigation within a TMDL document - see [Breadcrumbs](#breadcrumbs)
 
 ## Code Structure
@@ -40,6 +40,10 @@ A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?item
 | syntaxes            | Syntax definition files.                            |
 |                     | - `tmdl.tmLanguage.json`                            |
 
+# Code Formatting
+![Code Formatting](./images/Codeformatting.gif)
+Automatically organizes TMDL code for enhanced readability and consistency along with enhanced formatting for embedded Power Query within TMDL with soon integration of DAX query formatting.
+
 # Error Diagnostics
 ![Diagnostics](./images/Diagnostics.gif)
 Identifies and highlights errors in TMDL code directly within the editor.
@@ -48,9 +52,6 @@ Error messages are shown in the user's language based on locale settings.
 
 > **Note:** Users must update their `locale` setting separately for Power Query in the VS Code extension to enable localization.
 
-# Code Formatting
-![Code Formatting](./images/Codeformatting.gif)
-Automatically organizes TMDL code for enhanced readability and consistency along with enhanced formatting for embedded Power Query within TMDL with soon integration of DAX query formatting.
 # Autocomplete
 ![Autocomplete](./images/Autocomplete.gif)
 Provides smart, context-aware suggestions while editing TMDL documents.
