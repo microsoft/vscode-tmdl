@@ -30,8 +30,15 @@ A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?item
 - **Advanced Autocomplete** 
 
 # Semantic Highlighting
-![Semantic Highlighting](./images/Semantichighlighting.gif)
-Improves TMDL readability with context-aware syntax coloring
+VS Code uses TextMate grammars for basic syntax highlighting via regex-based tokenization. Semantic tokenization adds context-aware highlights from language servers, enhancing the base highlighting improving the overall readability of TMDL documents.
+
+Before:
+![Syntax Highlighting](./images/SyntaxHighlighting.png)
+After:
+![Semantic Highlighting](./images/SemanticHighlighting.png)
+Semantic highlighting enhances readability by providing consistent and context-aware styling—for enums, errors, integers and strings in property values, as well as strings and comments in Power Query (PQ) and many more! Support for DAX queries is also coming soon.
+
+> The [scope inspector tool](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#scope-inspector) allows you to explore what semantic tokens are present in a source file and what theme rules they match to.
 
 # Code Formatting
 ![Code Formatting](./images/Codeformatting.gif)
