@@ -25,16 +25,13 @@ A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?item
 
 ## 🚧 Coming soon
 - **Find References** 
-- **Context-Award Renaming** 
-- **Context-Award Delete Action** 
+- **Context-Aware Renaming** 
+- **Context-Aware Delete Action** 
 - **Advanced Autocomplete** 
 
 # Semantic Highlighting
 VS Code uses TextMate grammars for basic syntax highlighting via regex-based tokenization. Semantic tokenization adds context-aware highlights from language servers, enhancing the base highlighting improving the overall readability of TMDL documents.
 
-Before:
-![Syntax Highlighting](./images/SyntaxHighlighting.png)
-After:
 ![Semantic Highlighting](./images/SemanticHighlighting.png)
 Semantic highlighting enhances readability by providing consistent and context-aware styling—for enums, errors, integers and strings in property values, as well as strings and comments in Power Query (PQ) and many more! Support for DAX queries is also coming soon.
 
