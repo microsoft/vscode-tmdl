@@ -24,6 +24,8 @@ A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?item
 - **Hover Information**: Provides contextual information on mouse hover - see [Hover Information](#hover-information)
 
 ## 🚧 Coming soon
+- **DAX LSP**
+- **Hover Localization**
 - **Find References** 
 - **Context-Aware Renaming** 
 - **Context-Aware Delete Action** 
