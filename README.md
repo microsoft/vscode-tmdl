@@ -23,15 +23,15 @@ A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?item
 
 🐞Feedback is welcome and appreciated! If you  come across an issue/bug with the extension or have a feature request, please [file an issue](https://github.com/microsoft/vscode-tmdl/issues). 
 
-# Features
+# Features  
 
-- **Semantic Highlighting**: Improves TMDL readability with context-aware coloring - see [Semantic Highlighting](#semantic-highlighting)  
-- **Autocomplete**: Offers intelligent auto completion suggestions - see [Autocomplete](#autocomplete)
-- **Error Diagnostics**: Highlights TMDL language errors - see [Error Diagnostics](#error-diagnostics)
-- **Code Formatting**: Automatically organizes TMDL code - see [Code Formatting](#code-formatting)
-- **Code Actions**: Provides quick fixes and refactoring options for common TMDL issues such as duplicated lineage tag or misspelled property- see [Code Actions](#code-actions)
-- **Breadcrumbs**: Allow easy navigation within a TMDL document - see [Breadcrumbs](#breadcrumbs)
-- **Hover Information**: Provides contextual information on mouse hover - see [Hover Information](#hover-information)
+- [**Semantic Highlighting**](#semantic-highlighting): Improves TMDL readability with context-aware coloring.
+- [**Autocomplete**](#autocomplete): Offers intelligent auto completion suggestions.
+- [**Error Diagnostics**](#error-diagnostics): Highlights TMDL language errors.
+- [**Code Formatting**](#code-formatting): Automatically organizes TMDL code.
+- [**Code Actions**](#code-actions): Provides quick fixes and refactoring options for common TMDL issues such as duplicated lineage tag or misspelled property.
+- [**Breadcrumbs**](#breadcrumbs): Allow easy navigation within a TMDL document.
+- [**Hover Information**](#hover-information): Provides contextual information on mouse hover.
 
 ## 🚧 Coming soon
 - **DAX Semantic Highlighting & Autocomplete**
