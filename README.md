@@ -23,6 +23,14 @@ A [Visual Studio Code extension](https://marketplace.visualstudio.com/items?item
 
 🐞Feedback is welcome and appreciated! If you  come across an issue/bug with the extension or have a feature request, please [file an issue](https://github.com/microsoft/vscode-tmdl/issues). 
 
+### 💡 VSCode Theme Support
+
+TMDL syntax highlighting works best in the **Default Light** and **Dark Modern** themes in Visual Studio Code.
+
+> ⚠️ In some themes like **Visual Studio Dark** and **Visual Studio Light**, the syntax highlighting may be less visible.  
+> For the best experience, we recommend using one of the themes above.
+
+
 # Features  
 
 - [**Semantic Highlighting**](#semantic-highlighting): Improves TMDL readability with context-aware coloring.
